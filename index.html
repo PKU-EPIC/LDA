@@ -101,7 +101,7 @@
                 <div class="column-item">
                     <h3>Model Architecture</h3>
                     <img src="images/LDA_pipeline.png" alt="LDA-1B Architecture" style="display: block; margin: 0 auto;">
-                    <p style="line-height: 1.8; text-align: justify;">
+                    <p style="text-align: justify;">
                         The model jointly denoises action chunks and predicts future visual features within a unified multi-modal diffusion transformer framework.
                         
                     </p>
@@ -109,7 +109,7 @@
                 <div class="column-item">
                     <h3>EI-30k Dataset</h3>
                     <img src="images/dataset.png" alt="EI-30k Dataset" style="display: block; margin: 0 auto;">
-                    <p style="line-height: 1.8; text-align: justify;">
+                    <p style="text-align: justify;">
                         The dataset contains more than 30k hours of diverse human and robot interaction data. It spans varying episode lengths and manipulation tasks.
                     </p>
                 </div>
@@ -119,7 +119,7 @@
         <!-- DINO Latent Space -->
         <section id="dino">
             <h2>Latent Forward Dynamics Visualization</h2>
-            <p style="margin-top: 20px; line-height: 1.8; text-align: justify;">
+            <p style="margin-top: 20px; text-align: justify;">
                 LDA-1B operates in a structured DINO latent space, which avoids redundant pixel-space appearance modeling and enables the model to focus on task-relevant features.
             </p>
             <div class="video-grid video-grid-row">
@@ -165,7 +165,7 @@
                 <div class="column-item">
                     <h3>Data Scaling: Universal Embodied Data Ingestion</h3>
                     <img src="images/data_scaling.png" alt="Data Scaling Results" style="width: 80%; border-radius: 10px; margin: 20px auto; display: block;">
-                    <p style="margin-top: 20px; line-height: 1.8; text-align: justify;">
+                    <p style="margin-top: 20px; text-align: justify;">
                         <strong>Action Prediction Error vs. Training Data Size.</strong> Our co-training framework (blue) achieves steady error reduction to 0.066 by effectively leveraging diverse data, including low-quality trajectories and actionless videos.
                         The <em>Policy Only</em> baseline (grey) shows that naive behavior cloning is easily distracted by noise in heterogeneous datasets—error spikes sharply when lower-quality data is included.
                         In contrast, our full co-training framework exhibits a steady downward trend, effectively converting potential noise into useful supervisory signals for improved generalization.
@@ -174,7 +174,7 @@
                 <div class="column-item">
                     <h3>Model Scaling: Stable Large-Scale Training</h3>
                     <img src="images/model_scaling.png" alt="Model Scaling Results" style="width: 80%; border-radius: 10px; margin: 20px auto; display: block;">
-                    <p style="margin-top: 20px; line-height: 1.8; text-align: justify;">
+                    <p style="margin-top: 20px; text-align: justify;">
                         <strong>Scaling Performance Across Model Sizes.</strong> LDA (blue) demonstrates consistent error reduction with increasing dataset size (5k→20k trajectories) and model parameters (0.1B→1B).
                         Performance consistently improves with model size, showing that LDA-1B effectively consumes larger and more diverse datasets.
                         In contrast, the UWM baseline (grey) saturates rapidly and degrades with additional data, highlighting that LDA-1B's latent dynamics representation combined with the mixed-frequency multi-modal transformer enables stable large-scale training.
@@ -364,7 +364,7 @@
             <div class="robot-setup" style="margin: 40px 0;">
                 <h3>Robot Platforms</h3>
                 <img src="images/real_setup.png" alt="Real-world Robot Platforms" style="border-radius: 10px; margin: 20px auto; display: block;">
-                <p style="margin-top: 20px; line-height: 1.8; text-align: justify;">
+                <p style="margin-top: 20px; text-align: justify;">
                     <strong>Real-world robot platforms used in our physical experiments.</strong> From left to right:
                     (1) Galbot G1 equipped with a standard two-finger parallel gripper for basic grasping tasks;
                     (2) Galbot G1 fitted with the SharpaWave dexterous hand (22 DoF) for fine manipulation;
