@@ -100,7 +100,7 @@
             <div class="two-column-grid">
                 <div class="column-item">
                     <h3>Model Architecture</h3>
-                    <img src="images/LDA_pipeline.png" alt="LDA-1B Architecture" style="display: block; margin: 0 auto;">
+                    <img src="images/LDA_pipeline.png" alt="LDA-1B Architecture">
                     <p style="text-align: justify;">
                         The model jointly denoises action chunks and predicts future visual features within a unified multi-modal diffusion transformer framework.
                         
@@ -108,7 +108,7 @@
                 </div>
                 <div class="column-item">
                     <h3>EI-30k Dataset</h3>
-                    <img src="images/dataset.png" alt="EI-30k Dataset" style="display: block; margin: 0 auto;">
+                    <img src="images/dataset.png" alt="EI-30k Dataset">
                     <p style="text-align: justify;">
                         The dataset contains more than 30k hours of diverse human and robot interaction data. It spans varying episode lengths and manipulation tasks.
                     </p>
@@ -164,21 +164,43 @@
             <div class="two-column-grid">
                 <div class="column-item">
                     <h3>Data Scaling: Universal Embodied Data Ingestion</h3>
-                    <img src="images/data_scaling.png" alt="Data Scaling Results" style="width: 80%; border-radius: 10px; margin: 20px auto; display: block;">
+                    <img src="images/data_scaling.png" alt="Data Scaling Results">
                     <p style="margin-top: 20px; text-align: justify;">
-                        <strong>Action Prediction Error vs. Training Data Size.</strong> Our co-training framework (blue) achieves steady error reduction by effectively leveraging diverse data, including low-quality trajectories and actionless videos.
-                        The <em>Policy Only</em> baseline (grey) shows that naive behavior cloning is easily distracted by noise in heterogeneous datasets—error spikes sharply when lower-quality data is included.
-                        In contrast, our full co-training framework exhibits a steady downward trend, effectively converting potential noise into useful supervisory signals for improved generalization.
+                        Co-training (blue) steadily reduces error with diverse data; <em>Policy Only</em> (grey) degrades when low-quality data is added. Our framework turns such noise into useful supervision.
                     </p>
                 </div>
                 <div class="column-item">
                     <h3>Model Scaling: Stable Large-Scale Training</h3>
-                    <img src="images/model_scaling.png" alt="Model Scaling Results" style="width: 80%; border-radius: 10px; margin: 20px auto; display: block;">
+                    <img src="images/model_scaling.png" alt="Model Scaling Results">
                     <p style="margin-top: 20px; text-align: justify;">
-                        <strong>Scaling Performance Across Model Sizes.</strong> LDA (blue) demonstrates consistent error reduction with increasing dataset size (5k→20k trajectories) and model parameters (0.1B→1B).
-                        Performance consistently improves with model size, showing that LDA-1B effectively consumes larger and more diverse datasets.
-                        In contrast, the UWM baseline (grey) saturates rapidly and degrades with additional data, highlighting that LDA-1B's latent dynamics representation combined with the mixed-frequency multi-modal transformer enables stable large-scale training.
+                        LDA (blue) improves steadily; UWM (grey) saturates and degrades with more data. LDA-1B scales stably thanks to latent dynamics and the mixed-frequency transformer.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-World Results: Bar Charts (2:1 side-by-side) -->
+        <section id="real-world-results">
+            <h2>Real-World Results</h2>
+
+            <div class="result-figure-row-2-1">
+                <div class="result-figure-cell result-figure-cell-2">
+                    <div class="result-figure-title">Gripper (Galbot)</div>
+                    <div class="result-figure-img-wrap">
+                        <img src="images/galbot.png" alt="Success Rate Comparison on Real-World Gripper Manipulation Tasks" class="result-figure-img">
+                    </div>
+                    <div class="result-figure-caption">
+                        Eight tasks: pick-and-place, contact-rich, fine, and long-horizon. All models few-shot on Galbot. LDA-1B outperforms GR00T-N1.6 and π<sub>0.5</sub>.
+                    </div>
+                </div>
+                <div class="result-figure-cell result-figure-cell-1">
+                    <div class="result-figure-title">Dexterous</div>
+                    <div class="result-figure-img-wrap">
+                        <img src="images/dex_results_2.png" alt="Success Rate Comparison on Real-World Dexterous Manipulation Tasks" class="result-figure-img">
+                    </div>
+                    <div class="result-figure-caption">
+                        Five tasks: three on BrainCo (low-DoF), two on Sharpa (high-DoF). LDA-1B outperforms baselines, with largest gains on fine and high-DoF tasks.
+                    </div>
                 </div>
             </div>
         </section>
