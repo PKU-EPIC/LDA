@@ -48,6 +48,23 @@ h1 .title-lda {
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 1.45;
+    color: #333;
+}
+
+.authors .author-name {
+    color: #2563eb;
+}
+
+.authors a.author-name {
+    text-decoration: none;
+}
+
+.authors a.author-name:hover {
+    text-decoration: underline;
+}
+
+.authors sup {
+    color: #333;
 }
 
 .author {
