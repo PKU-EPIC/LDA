@@ -77,20 +77,21 @@
         <!-- Teaser Image -->
         <section id="teaser">
             <img src="images/lda_teaser.png" alt="LDA-1B Model Overview" style="width: 100%; border-radius: 10px; margin: 30px auto; display: block;">
-        </section>
-
-        <!-- Abstract -->
-        <section id="abstract">
-            <h2>Abstract</h2>
-            <div class="abstract">
-                Recent robot foundation models largely rely on large-scale behavior cloning, which imitates expert actions but discards transferable dynamics knowledge embedded in heterogeneous embodied data.
-                While the Unified World Model (UWM) formulation has the potential to leverage such diverse data, existing instantiations struggle to scale to foundation-level due to coarse data usage and fragmented datasets.
-                We introduce <strong>LDA-1B</strong>, a robot foundation model that scales through universal embodied data ingestion by jointly learning dynamics, policy, and visual forecasting, assigning distinct roles to data of varying quality.
-                To support this regime at scale, we assemble and standardize EI-30k, an embodied interaction dataset comprising over <strong>30k hours</strong> of human and robot trajectories in a unified format.
-                Scalable dynamics learning over such heterogeneous data is enabled by operating in a structured <strong>DINO latent space</strong>, which avoids redundant pixel-space appearance modeling.
-                Complementing this representation, LDA-1B employs a multi-modal diffusion transformer to handle asynchronous vision and action streams, enabling stable training at the <strong>1B-parameter</strong> scale.
-                Experiments in simulation and the real world show LDA-1B outperforms prior methods (e.g., π<sub>0.5</sub>) by up to <strong>21%</strong>, <strong>48%</strong>, and <strong>23%</strong> on contact-rich, dexterous, and long-horizon tasks, respectively.
-                Notably, LDA-1B enables data-efficient fine-tuning, gaining 10% by leveraging 30% low-quality trajectories typically harmful and discarded. 
+            <div style="font-size: 18.5px; line-height: 1.4; font-weight: 400; max-width: 1000px;">
+              
+                <span style="font-weight:600;">LDA-1B</span> is a 
+                <span style="font-style: italic;">dynamics-centric</span> 
+                <span style="font-weight:600;">robot foundation model</span> 
+                trained on 
+                <span style="font-weight:600;">30k+ hours</span> of 
+                <span style="color:#2E7D32; font-weight:600;">heterogeneous embodied data</span>.    
+                It jointly learns 
+                <span style="color:#1f77b4; font-weight:600;">dynamics</span>, 
+                <span style="color:#1f77b4; font-weight:600;">visual forecasting</span>, and 
+                <span style="color:#1f77b4; font-weight:600;">policy</span> 
+                in a unified <span style="color:#8d20ab; font-weight:600;">latent space</span>, 
+                enabling scalable learning beyond BC.
+                
             </div>
         </section>
 
@@ -99,7 +100,7 @@
             <h2>Universal Embodied Data Ingestion</h2>
             <div class="two-column-grid">
                 <div class="column-item">
-                    <h3>Model Architecture</h3>
+                    <h3>Unified Latent Dynamics and Policy Learning with MM-DiT</h3>
                     <img src="images/LDA_pipeline.png" alt="LDA-1B Architecture">
                     <p style="text-align: justify;">
                         The model jointly denoises action chunks and predicts future visual features within a unified multi-modal diffusion transformer framework.
@@ -107,10 +108,10 @@
                     </p>
                 </div>
                 <div class="column-item">
-                    <h3>EI-30k Dataset</h3>
+                    <h3>Large-scale Heterogeneous Embodied Data</h3>
                     <img src="images/dataset.png" alt="EI-30k Dataset">
                     <p style="text-align: justify;">
-                        The dataset contains more than 30k hours of diverse human and robot interaction data. It spans varying episode lengths and manipulation tasks.
+                        We collect EI-30k, comprising more than 30k hours of diverse human and robot interaction data, which spans varying episode lengths and manipulation tasks.
                     </p>
                 </div>
             </div>
