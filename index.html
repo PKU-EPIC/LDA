@@ -100,11 +100,11 @@
             <h2>Universal Embodied Data Ingestion</h2>
             <div class="two-column-grid">
                 <div class="column-item">
-                    <h3>Unified Latent Dynamics and Policy Learning with MM-DiT</h3>
+                    <h3>Unified Latent Dynamics and Policy Learning</h3>
                     <img src="images/LDA_pipeline.png" alt="LDA-1B Architecture">
                     <p style="text-align: justify;">
-                        The model jointly denoises action chunks and predicts future visual features within a unified multi-modal diffusion transformer framework.
-                        
+                        The model jointly denoises action chunks and future DINO sequences within a unified multi-modal diffusion transformer framework.
+                        Heterogeneous data play distinct yet complementary roles for learning visual forecasting, dynamics learning and policy. 
                     </p>
                 </div>
                 <div class="column-item">
@@ -121,7 +121,7 @@
         <section id="dino">
             <h2>Latent Forward Dynamics Visualization</h2>
             <p style="margin-top: 20px; text-align: justify;">
-                LDA-1B operates in a structured DINO latent space, which avoids redundant pixel-space appearance modeling and enables the model to focus on task-relevant features.
+                Forward and inverse dynamics operate in a structured DINO latent space, which avoids redundant pixel-space appearance modeling and enables the model to focus on task-relevant dynamics features.
             </p>
             <div class="video-grid video-grid-row">
                 <div class="video-item">
@@ -191,7 +191,7 @@
                         <img src="images/fig_galbot.png" alt="Success Rate Comparison on Real-World Gripper Manipulation Tasks" class="result-figure-img">
                     </div>
                     <div class="result-figure-caption">
-                        Eight tasks: pick-and-place, contact-rich, fine, and long-horizon. All models few-shot on Galbot. LDA-1B outperforms GR00T-N1.6 and π<sub>0.5</sub>.
+                        All models few-shot adapatation on Galbot. LDA-1B outperforms GR00T-N1.6 and π<sub>0.5</sub>.
                     </div>
                 </div>
                 <div class="result-figure-cell result-figure-cell-1">
@@ -200,7 +200,7 @@
                         <img src="images/fig_dexterous.png" alt="Success Rate Comparison on Real-World Dexterous Manipulation Tasks" class="result-figure-img">
                     </div>
                     <div class="result-figure-caption">
-                        Five tasks: three on BrainCo (low-DoF), two on Sharpa (high-DoF). LDA-1B outperforms baselines, with largest gains on fine and high-DoF tasks.
+                        Low and high-DoF dexterous manipulation.
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@
 
             <!-- Galbot Robot -->
             <div class="video-section">
-                <h3>Gripper Manipulation on humanoid robot</h3>
+                <h3>Gripper Manipulation</h3>
                 <!-- <div class="video-description">
                     Demonstrations with the Galbot G1 humanoid robot equipped with two-finger gripper.
                 </div> -->
