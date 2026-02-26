@@ -431,6 +431,12 @@ section img {
     border-radius: 8px;
 }
 
+/* Make the right (Dexterous) bar-chart image smaller */
+.result-figure-row-2-1 .result-figure-cell-1 .result-figure-img {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .result-figure-row-2-1 .result-figure-caption {
     margin-top: 12px;
     line-height: 1.5;
